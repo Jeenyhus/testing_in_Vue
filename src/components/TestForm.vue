@@ -5,15 +5,16 @@
         <h2>Section 1</h2>
     </div>
     <div class="learner-section">
-        <label>USERNAME</label>
+        <div class="HeaderbannerLabel">USERNAME</div>
         <input type="username" required v-model="username" placeholder="Enter your username">
-    </div>
+    </div> <br>
+    
     <div class="instructions">
-        <label>INSTRUCTIONS</label>
+        <div class="HeaderbannerLabel">INSTRUCTIONS</div>
         <p>Please complete this test in 5 minutes. <br>Ask your coach for any questions you may have.</p>
     </div>
     <div class="questions">
-        <label>QUESTIONS</label>
+        <div class="HeaderbannerLabel">QUESTIONS</div>
         <h4>(1) 1 &plus; 2 &equals;</h4>
         <p>
             <input type="radio" id="q1_a" name="q1" v-model="testResponse.q1" value="0">
@@ -33,16 +34,16 @@
         </p>
     </div>
     <div class="coach-sections">
-        <label>COACH SECTION</label> <br>
-        <input type="coach_id" required v-model="coach_id" placeholder="COACH ID">
-        <label>GRADE</label> <br>
-        <select v-model="grade" required>
+        <div class="HeaderbannerLabel">COACH SECTION</div> <br>
+        <input type="coach_id" required v-model="coach_id" placeholder="COACH ID"> <br>
+        <label>GRADE</label> <br> <br>
+        <select v-model="grade" required> <br>
             <option value="grade_4">4</option>
             <option value="grade_5">5</option>
             <option value="grade_6">6</option>
             <option value="grade_7">7</option>
         </select>
-        <input type="password" required v-model="password" placeholder="Password">
+        <input type="password" required v-model="password" placeholder="ZM.MM003">
         
     </div>
   </form>
@@ -65,20 +66,38 @@ export default {
 <style>
 form {
     max-width: 420px;
-    margin: 30px auto;
+    margin: 15px auto;
     background: white;
     text-align: left;
-    padding: 40px;
+    padding: 120px;
     border-radius: 10px;
 }
-label {
-    color: #aaa;
-    display: inline-block;
-    margin: 25px 0 15px;
-    font-size: 0.6em;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
+.username {
+    border: 0px;
+    border-bottom: 1px solid #c0c0c0;
+    width: 40%;
+    flex-shrink: 1;
+    background-color: transparent;
+    display: block;
+    font: 400 16px Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    min-width: 0%;
+    outline: none;
+    padding: 0;
+    z-index: 0;
+}
+.HeaderbannerLabel {
+    background-color: rgb(21, 187, 43);
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    font-weight: 500;
+    font: 400 16px/24px Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    padding: 8px 8px 8px 34px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    width: 45%;
 }
 input {
     display: block;
