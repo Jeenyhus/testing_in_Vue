@@ -1,8 +1,9 @@
 <template>
+
   <form id="test-form" @submit.prevent="handleSubmit">
     <div id="header">
         <img src="/images/edulution_logo.png" alt="edulution logo"> <br> <br> <br>
-        <h1>Sample Test 1</h1>
+        <h1>Sample Level 1</h1>
         <h2>Section 1</h2>
     </div>
     <div class="learner-section">
@@ -114,10 +115,8 @@
         </select>
         <input type="password" required v-model="password" placeholder="Password">
         
-    </div>
-    <div class="submit"> <br>
-        <button>SUBMIT</button>
-    </div>
+    </div><br>
+    
   </form>
 </template>
 
@@ -134,20 +133,19 @@ export default {
         }
     },
     methods: {
-        handleSubmit() {
-            //portal password validation
-            
-        }
+
     }
 }
 </script>
 
 <style>
     
-body {
+.body {
     background-color: rgb(179, 255, 179);
     font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+
 }
+
 h1 {
     font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
     color: #151515;
@@ -279,6 +277,7 @@ button {
     margin-top: 20px;
     color: white;
     border-radius: 20px;
+    cursor: pointer;
 }
 .submit {
     text-align: left;
